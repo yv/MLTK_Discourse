@@ -1,0 +1,27 @@
+%% Annotations-Schema
+%% Erste Spalte: Relationsname (mit "+"-Zeichen entsprechend Taxonomie-Tiefe)
+%% weitere Spalten: Flags zum Ausschluﬂ
+Temporal !aber
++narration
++temp_background !sobald !nachdem
+Result !waehrend !aber
++result_d_external
+++enable
+++cause
++result_d_internal *temporal !sobald
+++evidence
+++speech_act
+Comparison !sobald
++parallel !aber !waehrend
++contrast
+Concession !nachdem !waehrend !sobald !und
++contraexpectation
++antithesis
+Condition !nachdem !waehrend !aber !und
+NonFactual !nachdem !waehrend !aber !sobald !und
+RestatementC !nachdem !waehrend !aber !sobald
+Instance !nachdem !waehrend !aber !sobald
+CommentaryC !nachdem !waehrend !aber !sobald
+Continuative
++continuation !nachdem !waehrend !aber !sobald
++conjunction !nachdem !waehrend !aber !sobald

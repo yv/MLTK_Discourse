@@ -1,0 +1,3 @@
+[console_scripts]
+features_exml = mltk_discourse.features_exml:features_exml_main
+
