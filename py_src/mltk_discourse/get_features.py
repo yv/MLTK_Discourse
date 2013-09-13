@@ -16,8 +16,8 @@ from pynlp.de.gwn_old import germanet, wordsenses
 from pynlp.de.gwn_old.semclass import semclass_for_node
 from pynlp.de.gwn_old.gwn_word_features import get_verb_features
 
-from sem_features import classify_adverb, classify_px
-from tree_util import tree_yield, get_productions
+from mltk_discourse.sem_features import classify_adverb, classify_px
+from mltk_discourse.tree_util import tree_yield, get_productions
 
 
 stupid_head_finder=deps.SimpleDepExtractor(tueba_heads.hr_table+[(None,[(None,'HD','r'),(None,'l')])],['$,','$.'])

@@ -27,6 +27,10 @@ leider'''.split():
     adverb_classes[k]='comment'
 
 def classify_adverb(n):
+    '''
+    classifies an adverb by its semantic content
+    (realised as a lookup of a static list)
+    '''
     lem=n.head.lemma
     if lem in adverb_classes:
         return adverb_classes[lem]
@@ -35,6 +39,9 @@ def classify_adverb(n):
     return None
 
 def classify_px(n):
+    '''
+    classifies a prepositional phrase by its semantic content
+    '''
     if n.children[0].edge_label=='APP' and n.children[0].cat=='PX':
         n=n.children[0]
     lem=n.head.lemma
@@ -70,12 +77,4 @@ def classify_px(n):
 
 
 
-def get_productions(n,exclude,lst):
-    if n.isTerminal():
-        lst.append('%s=%s'%(n.cat,n.word))
-    else:
-        lst.append('%s=%s'%(n.cat,'-'.join([n1.cat for n1 in n.children])))
-        for n1 in n.children:
-            if n1 not in exclude:
-                get_productions(n1,exclude,lst)
 

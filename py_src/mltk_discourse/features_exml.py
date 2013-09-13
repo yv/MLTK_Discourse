@@ -41,6 +41,11 @@ disc_map['ParallelV']=disc_map['Parallel']
 disc_map['Result-Spreechact']=disc_map['Result-speechact']
 
 def get_unmarked_relations(doc,edu):
+    '''
+    retrieves all unmarked discourse relations
+    that are attached to one particular discourse
+    unit
+    '''
     by_target=defaultdict(list)
     for rel in edu.rels:
         if rel.marking:
@@ -51,6 +56,9 @@ def get_unmarked_relations(doc,edu):
     return [[[x[0] for x in xs]]+xs[0][1:] for xs in by_target.itervalues()]
 
 def span2nodes(doc,span):
+    '''
+    transforms a span into a sequence of (clausal) nodes
+    '''
     start,end0=span
     result=[]
     end=end0
